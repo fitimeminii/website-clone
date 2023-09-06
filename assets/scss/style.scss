@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&family=Oooh+Baby&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, "Segoe UI","Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.img-circle {
+    width: 250px;
+    margin: 0 auto;
+    display: block;
+}
+
+.badge {
+    display: inline-block;
+    margin: 15px 0px;
+    padding: 2px 15px;
+    border-radius: 10px;
+    color: #ececec;
+    transition: 0.2s;
+    animation: rotate 5s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    70% {
+        transform: rotate(0deg);
+    }
+    95% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.bg-red {
+    background-color: #ff4143;
+}
+
+a {
+    text-decoration: none;
+}
+
+a[class="arrow"]::after {
+    content: '↗';
+}
+
+main, section, footer {
+    padding: 60px 0px;
+    color: #E4E6EB
+}
+
+main {
+    background-color: #18191A;
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 100;
+        text-align: center;
+        margin-top: 0.8em;
+
+        .change {
+            font-weight: 700;
+        }
+
+        .life {
+            font-family: 'Dawning of a New Day', cursive;
+            font-family: 'Oooh Baby', cursive;
+            font-weight: 900;
+        }
+    }
+}
+
+section {
+    background-color: #242526;
+    text-align: center;
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    .lectures {
+        margin: 50px 0px;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 20px;
+    }
+
+    .card {
+        border: 1.5px solid #3A3B3C;
+        border-radius: 15px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        background-color: #1f2020;
+        transition: 0.2s;
+
+        i {
+            font-size: 64px;
+        }
+
+        a {
+            display: inline-block;
+            margin: 25px 0px;
+        }
+    }
+
+    .card:hover {
+        background-color: #2b2d2e;
+        transform: scale(1.02)
+    }
+
+    .logo {
+        width: 300px;
+        display: inline-block;
+        margin-top: 20px;
+    }
+}
+
+footer {
+    background-color: #18191A;
+    .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+    ul {
+        list-style-type: none;
+        display: flex;
+
+        a {
+            margin-left: 25px;
+            i {
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+
+        .lectures {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    main {
+        h1 {
+            font-size: 2rem;
+        }
+    }
+    footer {
+        .container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+    }
+}
+}
